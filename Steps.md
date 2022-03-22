@@ -113,10 +113,17 @@ img
 4. If the reviewer is happy with your new feature development, merge the code to the master branch.
 
 5. Head back on your terminal, checkout from the feature branch into the master, and pull down the latest changes.
-
+img
 
 Once your code changes appear in master branch – Jenkins will do its job and save all the files (build artifacts) to /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/ directory on Jenkins-Ansible server.
+img
 
+### RUN FIRST ANSIBLE TEST
 
+##### Step 7 – Run first Ansible test
 
+Now, it is time to execute ansible-playbook command and verify if your playbook actually works:
+
+           ansible-playbook -i /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/inventory/dev.yml /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/playbooks/common.yml
+           
 
